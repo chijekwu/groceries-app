@@ -30,6 +30,11 @@ const Additem = ({ onAdd }) => {
         return;
     }
     
+    if (!unit){
+      alert('Please specify a unit');
+      return;
+    }
+    
     onAdd({ item, unit, quantity, isPurchased })
 
     setItem('');
@@ -62,11 +67,11 @@ const Additem = ({ onAdd }) => {
       <div className='form-control'>
       <label>Unit</label>
         <select
-          selectedValue = 'lb'
           onChange={(e) => setUnit(e.target.value)}>
             <option value="Kg">Kg</option>
             <option value="LB">LB</option>
             <option value="Liter">Liter</option>
+            <option value="Pack">Pack</option>
             </select>
       </div>
       <div className='form-control form-control-check'>

@@ -25,6 +25,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .addBtn {

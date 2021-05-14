@@ -1,4 +1,4 @@
-import Additem from './Additem'
+import Additem from './AddItem'
 import Button from './Button'
 
 const Header = ({ title, onAdd, showAdd }) => {
@@ -8,7 +8,11 @@ const Header = ({ title, onAdd, showAdd }) => {
   return (
     <header className='header'>
       <h1>{title}</h1>
+      <div className='header'>
       <Button color='limegreen' text='Add Item' onClick={onClick}></Button>
+      <Button color='lightblue' text='Purchased Items' onClick={onClick}></Button>
+      </div>
+      
     </header>
   )
 }

@@ -3,7 +3,7 @@ const Item = ( {item, onDelete, onToggle }) => {
   
   
     return (
-      <div className="item" onDoubleClick={() => onToggle(item.id)}>
+      <div className={`item ${item.isPurchased ? 'isPurchased' : ''}`} onDoubleClick={() => onToggle(item.id)}>
         <p>{item.item} {item.quantity}{item.units} <FaTimes style={{ color: 'red', 
         fontSize:'24px', cursor: 'pointer' }}
         onClick={() => onDelete(item.id)}/>
